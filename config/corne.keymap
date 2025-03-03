@@ -22,7 +22,17 @@
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
   };
+/ {
+    combos {
+        compatible = "zmk,combos";
 
+        COMBO(escape, &kp ESC, 0 1, -1)
+        COMBO(tilde, &kp GRAVE, 10 11, -1)
+        COMBO(tab, &kp TAB, 12 13, 0)
+        COMBO(caps, &kp CAPS, 24 25, 0)
+        COMBO(enter, &kp ENTER, 29 30, -1)
+    };
+};
 / {
     keymap {
         compatible = "zmk,keymap";
