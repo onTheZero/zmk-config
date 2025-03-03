@@ -15,26 +15,25 @@
 // |  12  |  13  |  14  |  15  |  16  |                 |  19  |  20  |  21  |  22  |  23  |
 // |  24  |  25  |  26  |  27  |  28  |  29  |   |  30  |  31  |  32  |  33  |  34  |  35  |
 
-#define COMBO(NAME, BINDINGS, KEYPOS) \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
   combo_##NAME { \
     timeout-ms = <50>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <0>; \
+    layers = <LAYERS>; \
   };
 / {
     combos {
         compatible = "zmk,combos";
 
-        COMBO(escape, &kp ESC, 0 1)
-        COMBO(tilde, &kp GRAVE, 10 11)
-        COMBO(tab, &kp TAB, 12 13)
-        COMBO(caps, &kp CAPS, 24 25)
-        COMBO(enter, &kp ENTER, 29 30)
-        COMBO(gaming, &tog 3, 12 13 14 15)
+        COMBO(escape, &kp ESC, 0 1, LAYER_ALL)
+        COMBO(tilde, &KP TILDE, 10 11, LAYER_ALL)
+        COMBO(tab, &kp TAB, 12 13, 0)
+        COMBO(caps, &kp CAPS, 24 25, 0)
+        COMBO(enter, &kp ENTER, 29 30, 0)
+        COMBO(gaming, &tog 3, 12 13 14 15, 0 3)
     };
-};
-/ {
+
     keymap {
         compatible = "zmk,keymap";
 
