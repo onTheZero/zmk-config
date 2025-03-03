@@ -26,8 +26,8 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(escape, &kp ESC, 0 1, 0)
-        //COMBO(tilde, &KP GRAVE, 10 11, 0)
+        COMBO(escape, &kp ESC, 0 1, -1)
+        //COMBO(tilde, &kp GRAVE, 10 11, 0)
         //COMBO(tab, &kp TAB, 12 13, 0)
         //COMBO(caps, &kp CAPS, 24 25, 0)
         //COMBO(enter, &kp ENTER, 29 30, 0)
