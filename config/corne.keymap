@@ -32,7 +32,6 @@
         COMBO(tab, &kp TAB, 12 13, 0)
         COMBO(caps, &kp CAPS, 24 25, 0)
         COMBO(enter, &kp ENTER, 29 30, 0)
-        COMBO(gaming, &tog 3, 12 13 14 15, 0 3)
     };
 };
 
