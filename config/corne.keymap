@@ -6,7 +6,9 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -15,13 +17,16 @@
     key-positions = <KEYPOS>; \
     layers = <0>; \
   };
+
 // -----------------------------------------------------------------------------------------
 // |  0   |  1   |  2   |  3   |  4   |                 |  7   |  8   |  9   |  10  |  11  |
 // |  12  |  13  |  14  |  15  |  16  |                 |  19  |  20  |  21  |  22  |  23  |
 // |  24  |  25  |  26  |  27  |  28  |  29  |   |  30  |  31  |  32  |  33  |  34  |  35  |
+
 / {
     combos {
         compatible = "zmk,combos";
+
         COMBO(escape, &kp ESC, 0 1)
         COMBO(tab, &kp TAB, 12 13)
         COMBO(enter, &kp ENTER, 29 30)
@@ -31,44 +36,54 @@
 };
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |  U  |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G  |                 |  H  |  J  |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B  | SPC  |   | BSPC |  N  |  M  |  ,  |  .  |  /  |
+        default_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |  U  |  I  |  O  |  P  |
+            // |  A  |  S  |  D  |  F  |  G  |                 |  H  |  J  |  K  |  L  |  ;  |
+            // |  Z  |  X  |  C  |  V  |  B  | SPC  |   | BSPC |  N  |  M  |  ,  |  .  |  /  |
 
-                        bindings = <
-   &kp Q  &kp W  &kp E  &kp R  &kp T  &none        &none     &kp Y  &kp U  &kp I     &kp O    &kp P   
-   &kp A  &kp S  &kp D  &kp F  &kp G  &none        &none     &kp H  &kp J  &kp K     &kp L    &kp SEMI
-   &kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE    &kp BSPC  &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH
-                        >;
-                };
-                number_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |                 |  ^  |  &  |  *  |  (  |  )  |
-// |  1  |  2  |  3  |  4  |  5  |                 |  6  |  7  |  8  |  9  |  0  |
-// |  [  |  ]  |  {  |  }  |     | SPC  |   | BSPC |     |  -  |  =  |  +  |  _  |
-
-                        bindings = <
-   &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT &none        &none     &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR
-   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5    &none        &none     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0
-   &kp LBKT &kp RBKT &kp LBRC &kp RBRC &trans    &kp SPACE    &kp BSPC &trans    &kp MINUS &kp EQUAL &kp PLUS &kp UNDER
-                        >;
-                };
-                navigation_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |                 |  ^  |  &  |  *  |  (  |  )  |
-// |  1  |  2  |  3  |  4  |  5  |                 |  6  |  7  |  8  |  9  |  0  |
-// |  [  |  ]  |  {  |  }  |     | SPC  |   | BSPC |     |  -  |  =  |  +  |  _  |
-
-                        bindings = <
-   &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT &none        &none     &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR
-   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5    &none        &none     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0
-   &kp LBKT &kp RBKT &kp LBRC &kp RBRC &trans    &kp SPACE    &kp BSPC &trans    &kp MINUS &kp EQUAL &kp PLUS &kp UNDER
-                        >;
-                };
+            bindings = <
+&kp Q  &kp W  &kp E    &kp R             &kp T        &none        &none                 &kp Y                &kp U              &kp I      &kp O    &kp P
+&kp A  &kp S  &lt 1 D  &mt LEFT_SHIFT F  &kp G        &none        &none                 &kp H                &mt RIGHT_SHIFT J  &lt 1 K    &kp L    &mt SEMI SQT
+&kp Z  &kp X  &kp C    &mt LEFT_ALT V    &mt RCTRL B  &kp SPACE    &mt DELETE BACKSPACE  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M    &kp COMMA  &kp DOT  &kp FSLH
+            >;
         };
+
+        number_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  !  |  @  |  #  |  $  |  %  |                 |  ^  |  &  |  *  |  (  |  )  |
+            // |  1  |  2  |  3  |  4  |  5  |                 |  6  |  7  |  8  |  9  |  0  |
+            // |  [  |  ]  |  {  |  }  |     | SPC  |   | BSPC |     |  -  |  =  |  +  |  _  |
+
+            bindings = <
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &none     &none   &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR
+&kp N1    &kp N2    &kp N3    &kp N4    &kp N5     &none     &none   &kp N6     &kp N7     &kp N8     &kp N9    &kp N0
+&kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &trans     &trans    &trans  &trans     &kp MINUS  &kp EQUAL  &kp PLUS  &kp UNDER
+            >;
+        };
+
+        navigation_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  !  |  @  |  #  |  $  |  %  |                 |  ^  |  &  |  *  |  (  |  )  |
+            // |  1  |  2  |  3  |  4  |  5  |                 |  6  |  7  |  8  |  9  |  0  |
+            // |  [  |  ]  |  {  |  }  |     | SPC  |   | BSPC |     |  -  |  =  |  +  |  _  |
+
+            bindings = <
+&none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP    &none     &none   &none  &kp HOME  &kp UP_ARROW  &kp END    &none
+&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none     &none   &none  &kp LEFT  &kp RIGHT     &kp RIGHT  &none
+&none  &none           &none           &none            &none           &trans    &trans  &none  &none     &none         &none      &none
+            >;
+        };
+
+        gaming_layer {
+            bindings = <
+&kp Q  &kp W  &kp E  &kp R  &kp T  &none        &none                 &kp Y                &kp U              &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F  &kp G  &none        &none                 &kp H                &mt RIGHT_SHIFT J  &lt 1 K    &kp L    &mt SEMI SQT
+&kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE    &mt DELETE BACKSPACE  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M    &kp COMMA  &kp DOT  &kp FSLH
+            >;
+        };
+    };
 };
