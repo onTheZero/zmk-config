@@ -10,12 +10,12 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define COMBO(NAME, BINDINGS, KEYPOS) \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
   combo_##NAME { \
-    timeout-ms = <50>; \
+    timeout-ms = <75>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <0>; \
+    layers = <LAYERS>; \
   };
 
 // -----------------------------------------------------------------------------------------
@@ -27,11 +27,11 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(escape, &kp ESC, 0 1)
-        COMBO(tab, &kp TAB, 12 13)
-        COMBO(enter, &kp ENTER, 29 30)
-        COMBO(lshift, &kp LSHIFT, 14 15)
-        COMBO(rshift, &kp RSHIFT, 20 21)
+        COMBO(escape, &kp ESC, 0 1, -1)
+        COMBO(tilde, &KP TILDE, 10 11, -1)
+        COMBO(tab, &kp TAB, 12 13, 0)
+        COMBO(enter, &kp ENTER, 29 30, 0)
+        COMBO(gaming, &tog 3, 12 13 14 15, 0 3)
     };
 };
 
