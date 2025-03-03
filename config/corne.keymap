@@ -10,12 +10,12 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
-  combo_##NAME { \
-    timeout-ms = <75>; \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
-    layers = <LAYERS>; \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) /
+  combo_##NAME { /
+    timeout-ms = <75>; /
+    bindings = <BINDINGS>; /
+    key-positions = <KEYPOS>; /
+    layers = <LAYERS>; /
   };
 
 // -----------------------------------------------------------------------------------------
