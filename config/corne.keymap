@@ -10,12 +10,12 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define COMBO(NAME, BINDINGS, KEYPOS) \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
   combo_##NAME { \
-    timeout-ms = <50>; \
+    timeout-ms = <75>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <0>; \
+    layers = <LAYERS>; \
   };
 
 // -----------------------------------------------------------------------------------------
@@ -47,9 +47,9 @@
             // |  Z  |  X  |  C  |  V  |  B  | SPC  |   | BSPC |  N  |  M  |  ,  |  .  |  /  |
 
             bindings = <
-&kp Q  &kp W  &kp E    &kp R             &kp T        &none        &none                 &kp Y                &kp U              &kp I      &kp O    &kp P
-&kp A  &kp S  &lt 1 D  &mt LEFT_SHIFT F  &kp G        &none        &none                 &kp H                &mt RIGHT_SHIFT J  &lt 1 K    &kp L    &mt SEMI SQT
-&kp Z  &kp X  &kp C    &mt LEFT_ALT V    &mt RCTRL B  &kp SPACE    &mt DELETE BACKSPACE  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M    &kp COMMA  &kp DOT  &kp FSLH
+&kp Q  &kp W  &kp E           &kp R             &kp T        &none        &none                 &kp Y                &kp U              &kp I                &kp O    &kp P
+&kp A  &kp S  &lt 1 D         &mt LEFT_SHIFT F  &kp G        &none        &none                 &kp H                &mt RIGHT_SHIFT J  &lt 1 K              &kp L    &mt SEMI SQT
+&kp Z  &kp X  &mt LEFT_WIN C  &mt LEFT_ALT V    &mt RCTRL B  &kp SPACE    &mt DELETE BACKSPACE  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M    &mt RIGHT_WIN COMMA  &kp DOT  &kp FSLH
             >;
         };
 
@@ -67,11 +67,6 @@
         };
 
         navigation_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  !  |  @  |  #  |  $  |  %  |                 |  ^  |  &  |  *  |  (  |  )  |
-            // |  1  |  2  |  3  |  4  |  5  |                 |  6  |  7  |  8  |  9  |  0  |
-            // |  [  |  ]  |  {  |  }  |     | SPC  |   | BSPC |     |  -  |  =  |  +  |  _  |
-
             bindings = <
 &none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP    &none     &none   &none  &kp HOME  &kp UP_ARROW  &kp END    &none
 &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none     &none   &none  &kp LEFT  &kp RIGHT     &kp RIGHT  &none
@@ -81,9 +76,9 @@
 
         gaming_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T  &none        &none                 &kp Y                &kp U              &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F  &kp G  &none        &none                 &kp H                &mt RIGHT_SHIFT J  &lt 1 K    &kp L    &mt SEMI SQT
-&kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE    &mt DELETE BACKSPACE  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M    &kp COMMA  &kp DOT  &kp FSLH
+&kp Q  &kp W  &kp E  &kp R  &kp T  &none        &none                 &kp Y                &kp U              &kp I                &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F  &kp G  &none        &none                 &kp H                &mt RIGHT_SHIFT J  &lt 1 K              &kp L    &mt SEMI SQT
+&kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE    &mt DELETE BACKSPACE  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M    &mt RIGHT_WIN COMMA  &kp DOT  &kp FSLH
             >;
         };
     };
