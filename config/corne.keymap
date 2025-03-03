@@ -30,7 +30,6 @@
         COMBO(escape, &kp ESC, 0 1, -1)
         COMBO(tilde, &KP TILDE, 10 11, -1)
         COMBO(tab, &kp TAB, 12 13, 0)
-        COMBO(caps, &kp CAPS, 24 25, 0)
         COMBO(enter, &kp ENTER, 29 30, 0)
         COMBO(gaming, &tog 3, 12 13 14 15, 0 3)
     };
@@ -67,6 +66,11 @@
         };
 
         navigation_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  !  |  @  |  #  |  $  |  %  |                 |  ^  |  &  |  *  |  (  |  )  |
+            // |  1  |  2  |  3  |  4  |  5  |                 |  6  |  7  |  8  |  9  |  0  |
+            // |  [  |  ]  |  {  |  }  |     | SPC  |   | BSPC |     |  -  |  =  |  +  |  _  |
+
             bindings = <
 &none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP    &none     &none   &none  &kp HOME  &kp UP_ARROW  &kp END    &none
 &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none     &none   &none  &kp LEFT  &kp RIGHT     &kp RIGHT  &none
@@ -76,9 +80,9 @@
 
         gaming_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T  &none        &none                 &kp Y                &kp U              &kp I                &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F  &kp G  &none        &none                 &kp H                &mt RIGHT_SHIFT J  &lt 1 K              &kp L    &mt SEMI SQT
-&kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE    &mt DELETE BACKSPACE  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M    &mt RIGHT_WIN COMMA  &kp DOT  &kp FSLH
+&kp Q  &kp W  &kp E  &kp R  &kp T  &none        &none                 &kp Y                &kp U              &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F  &kp G  &none        &none                 &kp H                &mt RIGHT_SHIFT J  &lt 1 K    &kp L    &mt SEMI SQT
+&kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE    &mt DELETE BACKSPACE  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M    &kp COMMA  &kp DOT  &kp FSLH
             >;
         };
     };
