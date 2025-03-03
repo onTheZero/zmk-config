@@ -27,7 +27,7 @@
         compatible = "zmk,combos";
 
         COMBO(escape, &kp ESC, 0 1, LAYER_ALL)
-        COMBO(tilde, &KP TILDE, 10 11, LAYER_ALL)
+        COMBO(tilde, &KP GRAVE, 10 11, LAYER_ALL)
         COMBO(tab, &kp TAB, 12 13, 0)
         COMBO(caps, &kp CAPS, 24 25, 0)
         COMBO(enter, &kp ENTER, 29 30, 0)
