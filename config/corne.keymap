@@ -92,7 +92,7 @@
             bindings = <
 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &none     &none   &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR
 &kp N1    &kp N2    &kp N3    &kp N4    &kp N5     &none     &none   &kp N6     &kp N7     &kp N8     &kp N9    &kp N0
-&kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &trans     &trans    &trans  kp UNDER   &kp MINUS  &kp EQUAL  &kp PLUS  &kp SQT
+&kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &trans     &trans    &trans  &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS  &kp SQT
             >;
         };
 
