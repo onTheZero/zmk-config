@@ -21,7 +21,10 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
-    require-prior-idle-ms = <175>; \
+    tapping-term-ms = <280>; \
+    quick-tap-ms = <175>; \
+    require-prior-idle-ms = <150>; \
+    hold-trigger-key-positions = <29 30>; \
   };
 
 / {
@@ -35,7 +38,6 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <29 30>;
-            hold-trigger-on-release = true;
         };
 
         hl: homerow_layers {
@@ -47,7 +49,6 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <29 30>;
-            hold-trigger-on-release = true;
         };
     };
 
