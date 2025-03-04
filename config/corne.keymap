@@ -66,7 +66,7 @@
 
             bindings = <
 &kp Q  &kp W  &kp E           &kp R             &kp T        &none        &none                 &kp Y                &kp U              &kp I                &kp O    &kp P
-&kp A  &kp S  &hl 1 D         &hm LEFT_SHIFT F  &kp G        &none        &none                 &kp H                &hm RIGHT_SHIFT J  &hl 1 K              &kp L    &mt SEMI SQT
+&kp A  &kp S  &hl 1 D         &hm LEFT_SHIFT F  &kp G        &none        &none                 &kp H                &hm RIGHT_SHIFT J  &hl 1 K              &kp L    &mt SQT SEMI
 &kp Z  &kp X  &hm LEFT_WIN C  &hm LEFT_ALT V    &hm RCTRL B  &kp SPACE    &hm DELETE BACKSPACE  &hm RIGHT_CONTROL N  &hm RIGHT_ALT M    &hm RIGHT_WIN COMMA  &kp DOT  &kp FSLH
             >;
         };
@@ -95,8 +95,8 @@
         gaming_layer {
             bindings = <
 &kp Q  &kp W  &kp E  &kp R  &kp T  &none        &none                 &kp Y                &kp U              &kp I                &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F  &kp G  &none        &none                 &kp H                &mt RIGHT_SHIFT J  &lt 1 K              &kp L    &mt SEMI SQT
-&kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE    &mt DELETE BACKSPACE  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M    &mt RIGHT_WIN COMMA  &kp DOT  &kp FSLH
+&kp A  &kp S  &kp D  &kp F  &kp G  &none        &none                 &kp H                &hm RIGHT_SHIFT J  &hl 1 K              &kp L    &mt SQT SEMI
+&kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE    &hm DELETE BACKSPACE  &hm RIGHT_CONTROL N  &hm RIGHT_ALT M    &hm RIGHT_WIN COMMA  &kp DOT  &kp FSLH
             >;
         };
     };
