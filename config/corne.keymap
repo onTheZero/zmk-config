@@ -10,9 +10,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// Personal includes
-#include "includes/behaviours_homerow_mods.dtsi"
-
 // -----------------------------------------------------------------------------------------
 // |  0   |  1   |  2   |  3   |  4   |                 |  7   |  8   |  9   |  10  |  11  |
 // |  12  |  13  |  14  |  15  |  16  |                 |  19  |  20  |  21  |  22  |  23  |
@@ -47,9 +44,9 @@
             // |  Z  |  X  |  C  |  V  |  B  | SPC  |   | BSPC |  N  |  M  |  ,  |  .  |  /  |
 
             bindings = <
-&kp Q  &kp W  &kp E           &kp R               &kp T          &none        &none                   &kp Y                  &kp U                &kp I                  &kp O    &kp P
-&kp A  &kp S  &lt 1 D         &hm_l LEFT_SHIFT F  &kp G          &none        &none                   &kp H                  &hm_r RIGHT_SHIFT J  &lt 1 K                &kp L    &mt SEMI SQT
-&kp Z  &kp X  &kp LEFT_WIN C  &hm_l LEFT_ALT V    &hm_l RCTRL B  &kp SPACE    &hm_r DELETE BACKSPACE  &hm_r RIGHT_CONTROL N  &hm_r RIGHT_ALT M    &hm_r RIGHT_WIN COMMA  &kp DOT  &kp FSLH
+&kp Q  &kp W  &kp E           &kp R             &kp T        &none        &none                 &kp Y                &kp U              &kp I                &kp O    &kp P
+&kp A  &kp S  &lt 1 D         &mt LEFT_SHIFT F  &kp G        &none        &none                 &kp H                &mt RIGHT_SHIFT J  &lt 1 K              &kp L    &mt SEMI SQT
+&kp Z  &kp X  &mt LEFT_WIN C  &mt LEFT_ALT V    &mt RCTRL B  &kp SPACE    &mt DELETE BACKSPACE  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M    &mt RIGHT_WIN COMMA  &kp DOT  &kp FSLH
             >;
         };
 
