@@ -35,7 +35,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <29 30>;
-            hold-trigger-on-release;
+            hold-trigger-on-release = true;
         };
 
         hl: homerow_layers {
@@ -47,7 +47,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <29 30>;
-            hold-trigger-on-release;
+            hold-trigger-on-release = true;
         };
     };
 
