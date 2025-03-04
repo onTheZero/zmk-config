@@ -17,15 +17,11 @@
 
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
   combo_##NAME { \
-    timeout-ms = <50>; \
+    timeout-ms = <30>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
-    tapping-term-ms = <280>; \
-    quick-tap-ms = <175>; \
-    require-prior-idle-ms = <150>; \
-    hold-trigger-key-positions = <29 30>; \
-    hold-trigger-on-release; \
+    require-prior-idle-ms = <175>; \
   };
 
 / {
