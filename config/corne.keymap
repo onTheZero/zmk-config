@@ -41,8 +41,8 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&lt>, <&lt>;
-        }
-    }
+        };
+    };
 
     combos {
         compatible = "zmk,combos";
