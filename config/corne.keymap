@@ -15,9 +15,17 @@
     timeout-ms = <45>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <0>; \
     require-prior-idle-ms = <150>; \
   };
+
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+    combo_##NAME { \
+    timeout-ms = <45>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <LAYERS>; \
+    require-prior-idle-ms = <150>; \
+};
 
 / {
     behaviors {
@@ -29,6 +37,8 @@
             require-prior-idle-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <29 30>;
+            hold-trigger-on-release;
         };
 
         hl: homerow_layers {
@@ -39,6 +49,8 @@
             require-prior-idle-ms = <150>;
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <29 30>;
+            hold-trigger-on-release;
         };
     };
 
@@ -54,6 +66,8 @@
         COMBO(tilde, &kp GRAVE, 10 11)
         COMBO(tab, &kp TAB, 12 13)
         COMBO(caps, &kp CAPS, 24 25)
+        COMBO(backspace, &kp BACKSPACE, 7 8)
+        COMBO(delete, &kp DELETE, 3 4)
         COMBO(zmkstudio, &studio_unlock, 0 1 2 3)
     };
 
