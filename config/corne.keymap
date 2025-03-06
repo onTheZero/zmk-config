@@ -7,8 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/mouse.h>
 
 // -----------------------------------------------------------------------------------------
 // |  0   |  1   |  2   |  3   |  4   |                 |  7   |  8   |  9   |  10  |  11  |
@@ -76,7 +75,7 @@
 
             bindings = <
 &kp Q  &kp W  &kp E           &kp R           &kp T               &none                   &none                  &kp Y                &kp U            &kp I                &kp O    &hm SQT SEMI
-&kp A  &kp S  &kp D           &kp F           &hm 1 G             &none                   &none                  &hm 1 H              &kp J            &kp K                &kp L    &hl 2 P
+&kp A  &kp S  &kp D           &kp F           &hl 1 G             &none                   &none                  &hl 1 H              &kp J            &kp K                &kp L    &hl 2 P
 &kp Z  &kp X  &hm LEFT_WIN C  &hm LEFT_ALT V  &hm LEFT_CONTROL B  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT ENTER  &hm RIGHT_CONTROL N  &hm RIGHT_ALT M  &hm RIGHT_WIN COMMA  &kp DOT  &hm BSLH FSLH
             >;
         };
