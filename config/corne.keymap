@@ -75,9 +75,9 @@
             // |  Z  |  X  |  C  |  V  |  B  | SPC  |   | BSPC |  N  |  M  |  ,  |  .  |  /  |
 
             bindings = <
-&kp Q  &kp W  &kp E           &kp R             &kp T        &none                   &none                  &kp Y                &kp U              &kp I                &kp O    &hm SQT SEMI
-&kp A  &kp S  &kp D           &kp F             &hm 1 G      &none                   &none                  &hm 1 H              &kp J              &kp K                &kp L    &hl 2 P
-&kp Z  &kp X  &hm LEFT_WIN C  &hm LEFT_ALT V    &hm RCTRL B  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT ENTER  &hm RIGHT_CONTROL N  &hm RIGHT_ALT M    &hm RIGHT_WIN COMMA  &kp DOT  &hm BSLH FSLH
+&kp Q  &kp W  &kp E           &kp R           &kp T               &none                   &none                  &kp Y                &kp U            &kp I                &kp O    &hm SQT SEMI
+&kp A  &kp S  &kp D           &kp F           &hm 1 G             &none                   &none                  &hm 1 H              &kp J            &kp K                &kp L    &hl 2 P
+&kp Z  &kp X  &hm LEFT_WIN C  &hm LEFT_ALT V  &hm LEFT_CONTROL B  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT ENTER  &hm RIGHT_CONTROL N  &hm RIGHT_ALT M  &hm RIGHT_WIN COMMA  &kp DOT  &hm BSLH FSLH
             >;
         };
 
@@ -90,15 +90,15 @@
             bindings = <
 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &none     &none   &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR
 &kp N1    &kp N2    &kp N3    &kp N4    &kp N5     &none     &none   &kp N6     &kp N7     &kp N8     &kp N9    &kp N0
-&kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &trans     &trans    &trans  &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS  &kp SQT
+&kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &trans     &trans    &trans  &none      &kp MINUS  &kp EQUAL  &kp PLUS  &kp UNDER
             >;
         };
 
         navigation_layer {
             bindings = <
-&none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP    &none     &none   &none  &kp HOME  &kp UP_ARROW  &kp END    &none
-&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none     &none   &none  &kp LEFT  &kp RIGHT     &kp RIGHT  &none
-&none  &none           &none           &none            &none           &trans    &trans  &none  &none     &none         &none      &none
+&none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP    &none     &none   &none  &kp HOME  &kp UP_ARROW    &kp END    &none
+&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none     &none   &none  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &none
+&none  &none           &none           &none            &none           &trans    &trans  &none  &none     &none           &none      &none
             >;
         };
     };
