@@ -73,9 +73,9 @@
             // |  Z  |  X  |  C  |  V  |  B  | SPC  |   | BSPC |  N  |  M  |  ,  |  .  |  /  |
 
             bindings = <
-&kp Q  &kp W  &kp E       &kp R         &kp T        &none               &none             &kp Y        &kp U       &kp I           &kp O    &hm SQT SEMI
-&kp A  &kp S  &kp D       &kp F         &hl 1 G      &none               &none             &hl 1 H      &kp J       &kp K           &kp L    &h1 2 P
-&kp Z  &kp X  &hm LGUI C  &hm LALT V    &hm LCTRL B  &mt LSHIFT SPACE    &mt RSHIFT ENTER  &hm RCTRL N  &hm RALT M  &hm RGUI COMMA  &kp DOT  &hm BSLH FSLH
+&kp Q  &kp W  &kp E           &kp R             &kp T        &none        &none                 &kp Y                &kp U              &kp I                &kp O    &hm SQT SEMI
+&kp A  &kp S  &kp D         &kp F  &hm 1 G        &none        &none                 &hm 1 H                &kp J  &kp K              &kp L    &hl 2 P
+&kp Z  &kp X  &hm LEFT_WIN C  &hm LEFT_ALT V    &hm RCTRL B  &mt RIGHT_SHIFT SPACE    &mt RIGHT_SHIFT ENTER  &hm RIGHT_CONTROL N  &hm RIGHT_ALT M    &hm RIGHT_WIN COMMA  &kp DOT  &hm BSLH FSLH
             >;
         };
 
