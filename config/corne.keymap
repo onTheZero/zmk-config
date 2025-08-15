@@ -15,14 +15,14 @@
 // |  24  |  25  |  26  |  27  |  28  |                 |  29  |  30  |  31  |  32  |  33  |  
 //               |  34  |  35  |  36  |                 |  37  |  38  |  39  |
 
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
-  combo_##NAME { \
-    timeout-ms = <45>; \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
-    layers = <LAYERS>; \
-    require-prior-idle-ms = <150>; \
-  };
+//#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+//  combo_##NAME { \
+//    timeout-ms = <45>; \
+//    bindings = <BINDINGS>; \
+//    key-positions = <KEYPOS>; \
+//    layers = <LAYERS>; \
+//    require-prior-idle-ms = <150>; \
+//  };
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
     timeout-ms = <45>; \
