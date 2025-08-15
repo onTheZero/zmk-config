@@ -12,7 +12,8 @@
 // -----------------------------------------------------------------------------------------
 // |  0   |  1   |  2   |  3   |  4   |                 |  7   |  8   |  9   |  10  |  11  |
 // |  12  |  13  |  14  |  15  |  16  |                 |  19  |  20  |  21  |  22  |  23  |
-// |  24  |  25  |  26  |  27  |  28  |  29  |   |  30  |  31  |  32  |  33  |  34  |  35  |
+// |  24  |  25  |  26  |  27  |  28  |                 |  29  |  30  |  31  |  32  |  33  |  
+//               |  34  |  35  |  36  |                 |  37  |  38  |  39  |
 
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
   combo_##NAME { \
@@ -74,9 +75,10 @@
             // |  Z  |  X  |  C  |  V  |  B  | SPC  |   | BSPC |  N  |  M  |  ,  |  .  |  /  |
 
             bindings = <
-&kp Q  &kp W  &kp E           &kp R           &kp T               &none                   &none                  &kp Y                &kp U            &kp I                &kp O    &hm SQT SEMI
-&kp A  &kp S  &kp D           &kp F           &hl 1 G             &none                   &none                  &hl 1 H              &kp J            &kp K                &kp L    &hl 2 P
-&kp Z  &kp X  &hm LEFT_WIN C  &hm LEFT_ALT V  &hm LEFT_CONTROL B  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT ENTER  &hm RIGHT_CONTROL N  &hm RIGHT_ALT M  &hm RIGHT_WIN COMMA  &kp DOT  &hm BSLH FSLH
+&kp Q       &kp W  &kp E          &kp R             &kp T                   &kp Y                &kp U            &kp I                &kp O    &hm SQT SEMI
+&kp A       &kp S  &kp D          &kp F             &hl 1 G                 &hl 1 H              &kp J            &kp K                &kp L    &hl 2 P
+&kp Z       &kp X  &hm LEFT_WIN C &hm LEFT_ALT V    &kp B                   &kp N                &hm RIGHT_ALT M  &hm RIGHT_WIN COMMA  &kp DOT  &hm BSLH FSLH
+                   &kp LEFT_SHIFT &kp SPACE         &kp LEFT_CONTROL        &kp RIGHT_CONTROL    &kp ENTER        &kp RIGHT_SHIFT
             >;
         };
 
@@ -87,17 +89,19 @@
             // |  [  |  ]  |  {  |  }  |     | SPC  |   | BSPC |  _  |  -  |  =  |  +  |  '  |
 
             bindings = <
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &none     &none   &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR
-&kp N1    &kp N2    &kp N3    &kp N4    &kp N5     &none     &none   &kp N6     &kp N7     &kp N8     &kp N9    &kp N0
-&kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &trans     &trans    &trans  &none      &kp MINUS  &kp EQUAL  &kp PLUS  &kp UNDER
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCN        &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR
+&kp N1    &kp N2    &kp N3    &kp N4    &kp N5          &kp N6     &kp N7     &kp N8     &kp N9    &kp N0
+&kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &trans          &none      &kp MINUS  &kp EQUAL  &kp PLUS  &kp UNDER
+                    &trans      &trans      &trans      &trans      &trans      &trans      &trans 
             >;
         };
 
         navigation_layer {
             bindings = <
-&none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP    &none     &none   &none  &kp HOME  &kp UP_ARROW    &kp END    &none
-&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none     &none   &none  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &none
-&none  &none           &none           &none            &none           &trans    &trans  &none  &none     &none           &none      &none
+&none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP      &none  &kp HOME  &kp UP_ARROW    &kp END    &none
+&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN     &none  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &none
+&none  &none           &none           &none            &none            &none  &none     &none           &none      &none
+&trans &trans &trans &trans &trans &trans 
             >;
         };
     };
