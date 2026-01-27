@@ -103,14 +103,14 @@
 
         lbkt_combo {
             bindings = <&kp LBKT>;
-            key-positions = <16 17>;
+            key-positions = <28 29>;
             timeout-ms = <20>;
             require-prior-idle-ms = <100>;
         };
 
         rbkt_combo {
             bindings = <&kp RBKT>;
-            key-positions = <18 19>;
+            key-positions = <30 31>;
             timeout-ms = <20>;
             require-prior-idle-ms = <100>;
         };
@@ -133,7 +133,7 @@
 
         rbrc_combo {
             bindings = <&kp RBRC>;
-            key-positions = <6 7>;
+            key-positions = <18 19>;
             timeout-ms = <20>;
             require-prior-idle-ms = <100>;
             layers = <2>;
@@ -141,7 +141,7 @@
 
         lbrc_combo {
             bindings = <&kp LBRC>;
-            key-positions = <4 5>;
+            key-positions = <17 16>;
             timeout-ms = <20>;
             require-prior-idle-ms = <100>;
             layers = <2>;
