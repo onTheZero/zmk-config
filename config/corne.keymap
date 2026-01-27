@@ -107,7 +107,7 @@
             bindings = <&kp LPAR>;
             key-positions = <19 20>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <100>;
             layers = <2>;
         };
 
@@ -115,7 +115,7 @@
             bindings = <&kp RPAR>;
             key-positions = <20 21>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <100>;
             layers = <2>;
         };
     };
