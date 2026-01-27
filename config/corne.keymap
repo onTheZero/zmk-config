@@ -148,45 +148,45 @@
 
         default_layer {
             bindings = <
-XXX  &kp Q        &kp W        &kp E         &kp R          &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P                XXX
-XXX  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RWIN SEMICOLON  XXX
-XXX  &kp Z        &kp X        &kp C         &kp V          &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH            XXX
+  &kp Q        &kp W        &kp E         &kp R          &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P                
+  &hml LWIN A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RWIN SEMICOLON  
+  &kp Z        &kp X        &kp C         &kp V          &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH            
                                  &kp TAB       &mo 2          &kp SPACE    &kp ENTER  &mo 1         &kp BSPC
             >;
         };
 
         number_layer {
             bindings = <
-XXX  &kp LBKT          &kp N7  &kp N8   &kp N9  &kp RBKT     &none   &none       &none      &none     &none     XXX
-XXX  &kp SINGLE_QUOTE  &kp N4  &kp N5   &kp N6  &kp EQUAL    &mo 3   &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  XXX
-XXX  &kp TILDE         &kp N1  &kp N2   &kp N3  &kp BSLH     &none   &none       &none      &none     &none     XXX
+  &kp LBKT          &kp N7  &kp N8   &kp N9  &kp RBKT     &none   &none       &none      &none     &none     
+  &kp SINGLE_QUOTE  &kp N4  &kp N5   &kp N6  &kp EQUAL    &mo 3   &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  
+  &kp TILDE         &kp N1  &kp N2   &kp N3  &kp BSLH     &none   &none       &none      &none     &none     
                                  &kp DOT  &kp N0  &kp MINUS    &trans  &trans      &trans
             >;
         };
 
         navigation_layer {
             bindings = <
-XXX  &none     &none     &none      &none      &none     &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  XXX
-XXX  &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &mo 4     &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &caps_word  XXX
-XXX  &none     &none     &none      &none      &none     &kp HOME    &kp PG_DN    &kp PG_UP   &kp END    &kp INSERT  XXX
+  &none     &none     &none      &none      &none     &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  
+  &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &mo 4     &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &caps_word  
+  &none     &none     &none      &none      &none     &kp HOME    &kp PG_DN    &kp PG_UP   &kp END    &kp INSERT  
                            &trans     &trans     &trans    &kp DEL     &kp ESCAPE   &none
             >;
         };
 
         function_layer {
             bindings = <
-XXX  &kp F12  &kp F7  &kp F7  &kp F9  &kp PRINTSCREEN    &none   &none   &none   &none  &bootloader  XXX
-XXX  &kp F11  &kp F4  &kp F5  &kp F5  &kp SCROLLLOCK     &trans  &none   &none   &none  &none        XXX
-XXX  &kp F10  &kp F1  &kp F2  &kp F2  &kp PAUSE_BREAK    &none   &none   &none   &none  &none        XXX
+  &kp F12  &kp F7  &kp F7  &kp F9  &kp PRINTSCREEN    &none   &none   &none   &none  &bootloader  
+  &kp F11  &kp F4  &kp F5  &kp F5  &kp SCROLLLOCK     &trans  &none   &none   &none  &none        
+  &kp F10  &kp F1  &kp F2  &kp F2  &kp PAUSE_BREAK    &none   &none   &none   &none  &none        
                         &none   &none   &none              &trans  &trans  &trans
             >;
         };
 
         bluetooth_layer {
             bindings = <
-XXX  &bootloader  &none  &none   &none   &none     &studio_unlock  &none  &none  &ext_power EP_ON  &ext_power EP_OFF  XXX
-XXX  &none        &none  &none   &none   &trans    &none           &none  &none  &none             &none              XXX
-XXX  &none        &none  &none   &none   &none     &USB_ONLY       &BTS1  &BTS2  &BTS3             &BTS4              XXX
+  &bootloader  &none  &none   &none   &none     &studio_unlock  &none  &none  &ext_power EP_ON  &ext_power EP_OFF  
+  &none        &none  &none   &none   &trans    &none           &none  &none  &none             &none              
+  &none        &none  &none   &none   &none     &USB_ONLY       &BTS1  &BTS2  &BTS3             &BTS4              
                            &trans  &trans  &trans    &bt BT_CLR      &none  &none
             >;
         };
