@@ -52,16 +52,16 @@
         spc_morph: spc_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "SPC_MORPH";
-            bindings = <&kp SPACE>, <&kp BSPC>;
+            bindings = <&kp SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        enter_morph: enter_morph {
+        bspc_morph: bspc_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "ENTER_MORPH";
-            bindings = <&kp ENTER>, <&kp ESCAPE>;
+            label = "BSPC_MORPH";
+            bindings = <&kp BSPC>, <&kp DEL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -81,7 +81,7 @@
         lt_enter: lt_enter {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_ENTER";
-            bindings = <&mo>, <&enter_morph>;
+            bindings = <&mo>, <&bspc_morph>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
