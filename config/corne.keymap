@@ -101,37 +101,23 @@
         COMBO(backspace, &kp BSPC, 7 8)
         COMBO(zmkstudio, &studio_unlock, 0 1 2 3)
 
-        bspc_combo {
-            bindings = <&kp BSPC>;
-            key-positions = <7 8>;
-            timeout-ms = <20>;
-            require-prior-idle-ms = <100>;
-        };
-
-        del_combo {
-            bindings = <&kp DEL>;
-            key-positions = <8 9>;
-            timeout-ms = <20>;
-            require-prior-idle-ms = <100>;
-        };
-
         lbkt_combo {
             bindings = <&kp LBKT>;
-            key-positions = <19 20>;
+            key-positions = <16 17>;
             timeout-ms = <20>;
             require-prior-idle-ms = <100>;
         };
 
         rbkt_combo {
             bindings = <&kp RBKT>;
-            key-positions = <20 21>;
+            key-positions = <18 19>;
             timeout-ms = <20>;
             require-prior-idle-ms = <100>;
         };
 
         lpar_combo {
             bindings = <&kp LPAR>;
-            key-positions = <19 20>;
+            key-positions = <4 5>;
             timeout-ms = <20>;
             require-prior-idle-ms = <100>;
             layers = <2>;
@@ -139,7 +125,23 @@
 
         rpar_combo {
             bindings = <&kp RPAR>;
-            key-positions = <20 21>;
+            key-positions = <6 7>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <100>;
+            layers = <2>;
+        };
+
+        rbrc_combo {
+            bindings = <&kp RBRC>;
+            key-positions = <6 7>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <100>;
+            layers = <2>;
+        };
+
+        lbrc_combo {
+            bindings = <&kp LBRC>;
+            key-positions = <4 5>;
             timeout-ms = <20>;
             require-prior-idle-ms = <100>;
             layers = <2>;
