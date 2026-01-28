@@ -156,6 +156,16 @@
             timeout-ms = <20>;
             require-prior-idle-ms = <150>;
         };
+
+        zmkstudio {
+            bindings = <&studio_unlock>;
+            key-positions = <1 2 3 4 5>;
+        };
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <6 7 9 8 10>;
+        };
     };
 
     macros {
@@ -212,7 +222,7 @@
 &none  &kp LBKT          &kp N7  &kp N8   &kp N9  &kp RBKT     &none   &none       &none      &none     &none     &none
 &none  &kp SINGLE_QUOTE  &kp N4  &kp N5   &kp N6  &kp EQUAL    &mo 3   &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &none
 &none  &kp TILDE         &kp N1  &kp N2   &kp N3  &kp BSLH     &none   &none       &none      &none     &none     &none
-                                 &kp DOT  &kp N0  &kp MINUS    &trans  &trans      &none
+                                 &kp DOT  &kp N0  &kp MINUS    &trans  &trans      &trans
             >;
         };
 
