@@ -88,6 +88,22 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
         };
+
+        my_caps_word: my_caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "MY_CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <UNDERSCORE MINUS PERIOD>;
+        };
+
+        caps_morph: caps_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CAPS_MORPH";
+            bindings = <&my_caps_word>, <&kp CAPS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -228,9 +244,9 @@
 
         navigation_layer {
             bindings = <
-&none  &none     &none     &none      &none      &none     &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  &none
-&none  &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &mo 4     &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &caps_word  &none
-&none  &none     &none     &none      &none      &none     &kp HOME    &kp PG_DN    &kp PG_UP   &kp END    &kp INSERT  &none
+&none  &none     &none     &none      &none      &none     &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO   &none
+&none  &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &mo 4     &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &caps_morph  &none
+&none  &none     &none     &none      &none      &none     &kp HOME    &kp PG_DN    &kp PG_UP   &kp END    &kp INSERT   &none
                            &trans     &trans     &trans    &trans      &trans       &trans
             >;
         };
