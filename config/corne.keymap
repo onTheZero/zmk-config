@@ -253,19 +253,10 @@
 
         function_layer {
             bindings = <
-&none  &kp F12  &kp F7  &kp F7  &kp F9  &kp PRINTSCREEN    &none   &none   &none   &none  &bootloader  &none
-&none  &kp F11  &kp F4  &kp F5  &kp F5  &kp SCROLLLOCK     &trans  &none   &none   &none  &none        &none
-&none  &kp F10  &kp F1  &kp F2  &kp F2  &kp PAUSE_BREAK    &none   &none   &none   &none  &none        &none
-                        &trans  &trans  &trans             &trans  &trans  &trans
-            >;
-        };
-
-        bluetooth_layer {
-            bindings = <
-&none  &bootloader  &none  &none   &none   &none     &studio_unlock  &none   &none   &ext_power EP_ON  &ext_power EP_OFF  &none
-&none  &none        &none  &none   &none   &trans    &none           &none   &none   &none             &none              &none
-&none  &none        &none  &none   &none   &none     &USB_ONLY       &BTS1   &BTS2   &BTS3             &BTS4              &none
-                           &trans  &trans  &trans    &bt BT_CLR      &trans  &trans
+&none  &kp F12  &kp F7  &kp F7  &kp F9  &kp PRINTSCREEN    &studio_unlock  &none   &none   &ext_power EP_ON  &ext_power EP_OFF  &none
+&none  &kp F11  &kp F4  &kp F5  &kp F5  &kp SCROLLLOCK     &none           &none   &none   &none             &none              &none
+&none  &kp F10  &kp F1  &kp F2  &kp F2  &kp PAUSE_BREAK    &USB_ONLY       &BTS1   &BTS2   &BTS3             &BTS4              &none
+                        &trans  &trans  &trans             &bt BT_CLR      &trans  &trans
             >;
         };
     };
