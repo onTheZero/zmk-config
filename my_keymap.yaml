@@ -1,0 +1,96 @@
+layout: {zmk_keyboard: microdox } 
+layers:
+  default:
+  - [Q, W, E, R, T]
+  - [Y, U, I, O, ;]
+  - - {t: A, h: LWIN}
+    - {t: S, h: LALT}
+    - {t: D, h: LCTRL}
+    - {t: F, h: LSHIFT}
+    - G
+  - - H
+    - {t: J, h: RSHFT}
+    - {t: K, h: RCTRL}
+    - {t: L, h: RALT}
+    - {t: P, h: RWIN}
+  - [ Z, X, C, V, B]
+  - [N, M, ',', ., /]
+  - [navigation, SPACE, ESC, BSPC, ENTER, number]
+  number:
+  - ['[', '7', '8', '9', ']']
+  - ['', '', '', '', '']
+  - [ '''', '4', '5', '6', '=']
+  - [function, RSHIFT, RCTRL, RALT, RGUI]
+  - ['~', '1', '2', '3', \]
+  - ['', '', '', '', '']
+  - - .
+    - '0'
+    - '-'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+  navigation:
+  - ['', '', '', '', '']
+  - [REDO, PASTE, COPY, CUT, UNDO]
+  - [LWIN, LALT, LCTRL, LSHFT, bluetooth]
+  - [LEFT, DOWN, UP, RIGHT, '&caps_word']
+  - ['', '', '', '', '']
+  - [HOME, PG DN, PG UP, END, INSERT]
+  - - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  function:
+  - [F12, F7, F7, F9, PRINTSCREEN]
+  - ['', '', '', '', '&bootloader']
+  - [F11, F4, F5, F5, SCROLLLOCK]
+  - - {type: held}
+    - ''
+    - ''
+    - ''
+    - ''
+  - [F10, F1, F2, F2, PAUSE BREAK]
+  - ['', '', '', '', '']
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+  bluetooth:
+  - ['&bootloader', '', '', '']
+  - ['&studio_unlock', '', '', EP ON, EP OFF]
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - {type: held}
+  - ['', '', '', '', '']
+  - ['', '', '', '', '']
+  - ['&USB_ONLY', '&BTS1', '&BTS2', '&BTS3', '&BTS4']
+  - - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - BT CLR
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+combos:
+- p: [23, 24]
+  k: '['
+- p: [25, 26]
+  k: ']'
+- p: [3, 4]
+  k: (
+- p: [5, 6]
+  k: )
+- p: [15, 16]
+  k: '}'
+- p: [13, 14]
+  k: '{'
+- p: [6, 7]
+  k: DEL
+- p: [2, 3]
+  k: TAB
