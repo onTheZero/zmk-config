@@ -26,8 +26,8 @@
 
 #define ___ &trans
 
-#define idle_ms 100;
-#define tap_ms 280;
+#define idle_ms 100
+#define tap_ms 280
 
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
