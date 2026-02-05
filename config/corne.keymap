@@ -24,7 +24,25 @@
 #define ___ &trans
 
 #define idle_ms 100;
-#define tap_term 280;
+#define tap_ms 280;
+
+ZMK_HOLD_TAP(hml,
+    flavor = "balanced";
+    tapping-term-ms = <tap_ms>;
+    require-prior-idle-ms = <idle_ms>;
+    hold-trigger-key-positions = <KEYS_R THUMBS>;
+    hold-trigger-on-release;
+    bindings = <&kp>, <&kp>;
+)
+
+ZMK_HOLD_TAP(hmr,
+    flavor = "balanced";
+    tapping-term-ms = <idle_ms>;
+    require-prior-idle-ms = <tap_ms>;
+    hold-trigger-key-positions = <KEYS_L THUMBS>;
+    hold-trigger-on-release;
+    bindings = <&kp>, <&kp>;
+)
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -36,33 +54,33 @@
 
 / {
     behaviors {
-        hmr: hmr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
-            bindings = <&kp>, <&kp>;
+        //hmr: hmr {
+        //    compatible = "zmk,behavior-hold-tap";
+        //    label = "HMR";
+        //    bindings = <&kp>, <&kp>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <100>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 37 38 39 40>;
-        };
+        //    #binding-cells = <2>;
+        //    tapping-term-ms = <280>;
+        //    quick-tap-ms = <175>;
+        //    require-prior-idle-ms = <100>;
+        //    flavor = "balanced";
+        //    hold-trigger-on-release;
+        //    hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 37 38 39 40>;
+        //};
 
-        hml: hml {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML";
-            bindings = <&kp>, <&kp>;
+        //hml: hml {
+        //    compatible = "zmk,behavior-hold-tap";
+        //    label = "HML";
+        //    bindings = <&kp>, <&kp>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <100>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 37 38 39 40>;
-        };
+        //    #binding-cells = <2>;
+        //    tapping-term-ms = <280>;
+        //    quick-tap-ms = <175>;
+        //    require-prior-idle-ms = <100>;
+        //    flavor = "balanced";
+        //    hold-trigger-on-release;
+        //    hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 37 38 39 40>;
+        //};
 
         my_caps_word: my_caps_word {
             compatible = "zmk,behavior-caps-word";
