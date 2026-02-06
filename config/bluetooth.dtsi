@@ -1,3 +1,5 @@
+#include "include/helper.h"
+
 ZMK_MACRO(usb_only,
   wait-ms = <100>;
   tap-ms = <5>;
