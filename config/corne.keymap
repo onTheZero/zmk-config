@@ -47,8 +47,8 @@ ZMK_CAPS_WORD(my_caps,
 )
 
 ZMK_TAP_DANCE(caps_dance,
-  tapping-term-ms = <dance_ms>;
   bindings = <&my_caps, &kp CAPS>;
+  tapping-term-ms = <dance_ms>;
 )
 
 // tap: backspace | shift + tap: delete
