@@ -2,9 +2,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-
-#include "zmk-helpers/helper.h"
-#include "zmk-helpers/key-labels/36.h"
+/**/
+/* #include "zmk-helpers/helper.h" */
+/* #include "zmk-helpers/key-labels/36.h" */
 
 #include "include/36.h"
 #include "include/helper.h"
@@ -55,51 +55,6 @@ ZMK_CAPS_WORD(my_caps,
   continue-list = <UNDERSCORE MINUS BSPC>;
 )
 
-/* ZMK_MACRO(usb_only, */
-/*   wait-ms = <100>; */
-/*   tap-ms = <5>; */
-/*   bindings = <&bt BT_SEL 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4 &out OUT_USB &bt BT_CLR>; */
-/* ) */
-/* ZMK_MACRO(_bt1, */
-/*   wait-ms = <100>; */
-/*   tap-ms = <5>; */
-/*   bindings = <&bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4 &out OUT_BLE>; */
-/* ) */
-/* ZMK_MACRO(_bt2, */
-/*   wait-ms = <100>; */
-/*   tap-ms = <5>; */
-/*   bindings = <&bt BT_SEL 2 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 3 &bt BT_DISC 4 &out OUT_BLE>; */
-/* ) */
-/* ZMK_MACRO(_bt3, */
-/*   wait-ms = <100>; */
-/*   tap-ms = <5>; */
-/*   bindings = <&bt BT_SEL 3 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 4 &out OUT_BLE>; */
-/* ) */
-/* ZMK_MACRO(_bt4, */
-/*   wait-ms = <100>; */
-/*   tap-ms = <5>; */
-/*   bindings = <&bt BT_SEL 4 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &out OUT_BLE>; */
-/* ) */
-/* ZMK_MACRO(clear_bt1, */
-/*   wait-ms = <100>; */
-/*   tap-ms = <5>; */
-/*   bindings = <&bt BT_SEL 1 &bt BT_CLR>; */
-/* ) */
-/* ZMK_MACRO(clear_bt2, */
-/*   wait-ms = <100>; */
-/*   tap-ms = <5>; */
-/*   bindings = <&bt BT_SEL 2 &bt BT_CLR>; */
-/* ) */
-/* ZMK_MACRO(clear_bt3, */
-/*   wait-ms = <100>; */
-/*   tap-ms = <5>; */
-/*   bindings = <&bt BT_SEL 3 &bt BT_CLR>; */
-/* ) */
-/* ZMK_MACRO(clear_bt4, */
-/*   wait-ms = <100>; */
-/*   tap-ms = <5>; */
-/*   bindings = <&bt BT_SEL 4 &bt BT_CLR>; */
-/* ) */
 ZMK_TAP_DANCE(caps_dance,
   tapping-term-ms = <dance_ms>;
   bindings = <&my_caps>, <&kp CAPS>;
@@ -110,26 +65,6 @@ ZMK_MOD_MORPH(m_del,
     bindings = <&kp BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
-
-/* ZMK_MOD_MORPH(m_bt1, */
-/*   bindings = <&_bt1>, <&clear_bt1>; */
-/*   mods = <(MOD_LSFT|MOD_RSFT)>; */
-/*   ) */
-/**/
-/* ZMK_MOD_MORPH(m_bt2, */
-/*   bindings = <&_bt2>, <&clear_bt2>; */
-/*   mods = <(MOD_LSFT|MOD_RSFT)>; */
-/* ) */
-/**/
-/* ZMK_MOD_MORPH(m_bt3, */
-/*   bindings = <&_bt3>, <&clear_bt3>; */
-/*   mods = <(MOD_LSFT|MOD_RSFT)>; */
-/* ) */
-/**/
-/* ZMK_MOD_MORPH(m_bt4, */
-/*   bindings = <&_bt4>, <&clear_bt4>; */
-/*   mods = <(MOD_LSFT|MOD_RSFT)>; */
-/* ) */
 
 // combos
 ZMK_COMBO(caps_com, &caps_dance, LM0 RM0, ALL)
@@ -155,7 +90,7 @@ ZMK_LAYER(default_layer,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH    
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
-                                      &mo NAV       &kp SPACE     &kp ESC           &kp BSPC      &kp ENTER     &mo NUM
+                                      &mo NAV       &kp SPACE     &kp ESC           &m_del        &kp ENTER     &mo NUM
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
