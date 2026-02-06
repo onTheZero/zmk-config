@@ -1,0 +1,17 @@
+if SHIELD_36KEY_LEFT
+
+# Name must be less than 16 characters long!
+config ZMK_36KEY
+    default "36key ZMK"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_36KEY_LEFT || SHIELD_36KEY_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

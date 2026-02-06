@@ -95,8 +95,8 @@ ZMK_COMBO(rbrc_com, &kp RBRC, RM0 RM1, ALL)
 ZMK_COMBO(lbkt_com, &kp LBKT, LB0 LB1, ALL)
 ZMK_COMBO(rbkt_com, &kp RBKT, RB0 RB1, ALL)
 
-ZMK_COMBO(lreset, &bootloader, LT4 LT5, NAV)
-ZMK_COMBO(rreset, &bootloader, RT4 RT5, NUM)
+/* ZMK_COMBO(lreset, &bootloader, LT4 LT5, NAV) */
+/* ZMK_COMBO(rreset, &bootloader, RT4 RT5, NUM) */
 
 /* Keymap */
 
