@@ -46,9 +46,9 @@ ZMK_CAPS_WORD(my_caps,
   continue-list = <UNDERSCORE MINUS BSPC>;
 )
 
-ZMK_TAP_DANCE(caps_dance,
-  bindings = <&my_caps, &kp CAPS>;
+ZMK_TAP_DANCE(cw_cl, tap_dance,
   tapping-term-ms = <dance_ms>;
+  bindings = <&my_caps, &kp CAPS>;
 )
 
 // tap: backspace | shift + tap: delete
@@ -69,22 +69,22 @@ ZMK_MACRO(usb_only,
   tap-ms = <5>;
   bindings = <&bt BT_SEL 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4 &out OUT_USB &bt BT_CLR>;
 )
-ZMK_MACRO(usb_only,
+ZMK_MACRO(_bt1,
   wait-ms = <100>;
   tap-ms = <5>;
   bindings = <&bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4 &out OUT_BLE>;
 )
-ZMK_MACRO(usb_only,
+ZMK_MACRO(_bt2,
   wait-ms = <100>;
   tap-ms = <5>;
   bindings = <&bt BT_SEL 2 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 3 &bt BT_DISC 4 &out OUT_BLE>;
 )
-ZMK_MACRO(usb_only,
+ZMK_MACRO(_bt3,
   wait-ms = <100>;
   tap-ms = <5>;
   bindings = <&bt BT_SEL 3 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 4 &out OUT_BLE>;
 )
-ZMK_MACRO(usb_only,
+ZMK_MACRO(_bt4,
   wait-ms = <100>;
   tap-ms = <5>;
   bindings = <&bt BT_SEL 4 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &out OUT_BLE>;
