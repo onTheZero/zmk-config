@@ -67,16 +67,25 @@ ZMK_MOD_MORPH(m_del,
 )
 
 // combos
-ZMK_COMBO(caps_com, &caps_dance, LM0 RM0, ALL)
+ZMK_COMBO(caps_com, &caps_dance, LM0 RM0, DEF)
 
-ZMK_COMBO(tab_com, &kp TAB, LM1 LM2, ALL)
 
-ZMK_COMBO(lpar_com, &kp LPAR, LT0 LT1, ALL)
-ZMK_COMBO(rpar_com, &kp RPAR, RT0 RT1, ALL)
-ZMK_COMBO(lbrc_com, &kp LBRC, LM0 LM1, ALL)
-ZMK_COMBO(rbrc_com, &kp RBRC, RM0 RM1, ALL)
-ZMK_COMBO(lbkt_com, &kp LBKT, LB0 LB1, ALL)
-ZMK_COMBO(rbkt_com, &kp RBKT, RB0 RB1, ALL)
+ZMK_COMBO(lpar_com, &kp LPAR, LT0 LT1, DEF)
+ZMK_COMBO(rpar_com, &kp RPAR, RT0 RT1, DEF)
+ZMK_COMBO(lbrc_com, &kp LBRC, LM0 LM1, DEF)
+ZMK_COMBO(rbrc_com, &kp RBRC, RM0 RM1, DEF)
+ZMK_COMBO(lbkt_com, &kp LBKT, LB0 LB1, DEF)
+ZMK_COMBO(rbkt_com, &kp RBKT, RB0 RB1, DEF)
+
+ZMK_COMBO(tab_com, &kp TAB, LT1 LT2, DEF)
+ZMK_COMBO(sqt_com, &kp SQT, LT2 LT3, DEF)
+ZMK_COMBO(equal_com, &kp EQUAL, LB1 LB2, DEF)
+ZMK_COMBO(under_com, &kp UNDER, LB2 LB3, DEF)
+
+ZMK_COMBO(star_com, &kp STAR, RT1 RT2, DEF)
+ZMK_COMBO(grave_com, &kp GRAVE, RT2 RT3, DEF)
+ZMK_COMBO(amps_com, &kp AMPS, RB1 RB2, DEF)
+ZMK_COMBO(excl_com, &kp EXCL, RB2 RB3, DEF)
 
 ZMK_COMBO(lreset, &bootloader, LT3 LT4, NAV)
 ZMK_COMBO(rreset, &bootloader, RT3 RT4, NUM)
@@ -86,9 +95,9 @@ ZMK_LAYER(default_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp SEMI     
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &hml LWIN A   &hml LALT S   &hml LCTRL D  &hml LSHIFT F &kp G             &kp H         &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L   &hmr RWIN P  
+          &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHIFT F &kp G             &kp H         &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI P  
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH    
+          &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH    
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
                                       &mo NAV       &kp SPACE     &kp ESC           &m_del        &kp ENTER     &mo NUM
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -96,13 +105,13 @@ ZMK_LAYER(default_layer,
 
 ZMK_LAYER(num_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp LBKT      &kp N7        &kp N8        &kp N9        &kp RBKT          xxx           xxx           xxx           xxx           xxx         
+          &kp PLUS      &kp N7        &kp N8        &kp N9        &kp MINUS          xxx           xxx           xxx           xxx           xxx         
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp SQT       &kp N4        &kp N5        &kp N6        &kp EQUAL         xxx           &kp RSHIFT    &kp RCTRL     &kp RALT      &kp RGUI      
+          &kp EQUAL     &kp N4        &kp N5        &kp N6        &kp N0            xxx           &kp RSHIFT    &kp RCTRL     &kp RALT      &kp RGUI      
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp TILDE     &kp N1        &kp N2        &kp N3        &kp BSLH          xxx           xxx           xxx           xxx           xxx         
+          &kp BLSH      &kp N1        &kp N2        &kp N3        &kp DOT           xxx           xxx           xxx           xxx           xxx         
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
-                                      &lt FUN DOT   &kp N0        &kp MINUS         ___           ___           ___
+                                      &lt FUN DOT   ___           ___               ___           ___           ___
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -110,7 +119,7 @@ ZMK_LAYER(nav_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           xxx           xxx           xxx           xxx           xxx               &kp K_REDO    &kp K_PASTE   &kp K_COPY    &kp K_CUT     &kp K_UNDO   
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LWIN      &kp LALT      &kp LCTRL     &kp LSHFT     xxx               &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp CAPS     
+          &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     xxx               &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp CAPS     
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           xxx           xxx           xxx           xxx           xxx               &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp INSERT   
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
