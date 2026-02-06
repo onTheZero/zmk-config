@@ -46,10 +46,10 @@ ZMK_CAPS_WORD(my_caps,
   continue-list = <UNDERSCORE MINUS BSPC>;
 )
 
-ZMK_TAP_DANCE(cw_cl, tap_dance,
-  tapping-term-ms = <dance_ms>;
-  bindings = <&my_caps, &kp CAPS>;
-)
+//ZMK_TAP_DANCE(cw_cl, tap_dance,
+//  tapping-term-ms = <dance_ms>;
+//  bindings = <&my_caps, &kp CAPS>;
+//)
 
 // tap: backspace | shift + tap: delete
 ZMK_MOD_MORPH(bs_del,
