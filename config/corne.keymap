@@ -6,7 +6,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #include "zmk-helpers/helper.h"
-#include "zmk-helpers/key-labels/42.h"
+#include "zmk-helpers/key-labels/36.h"
 
 #define ___ &trans
 #define xxx &none
@@ -102,11 +102,11 @@ ZMK_COMBO(rreset, &bootloader, RT4 RT5, NUM)
 
 ZMK_LAYER(default_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-xxx          &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp SEMI     xxx
+          &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp SEMI     
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-xxx          &hml LWIN A   &hml LALT S   &hml LCTRL D  &hml LSHIFT F &kp G             &kp H         &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L   &hmr RWIN P  xxx
+          &hml LWIN A   &hml LALT S   &hml LCTRL D  &hml LSHIFT F &kp G             &kp H         &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L   &hmr RWIN P  
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-xxx          &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH    xxx
+          &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH    
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
                                       &mo NAV       &kp SPACE     &kp ESC           &kp BSPC      &kp ENTER     &mo NUM
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -114,11 +114,11 @@ xxx          &kp Z         &kp X         &kp C         &kp V         &kp B      
 
 ZMK_LAYER(num_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-xxx          &kp LBKT      &kp N7        &kp N8        &kp N9        &kp RBKT          &none         &none         &none         &none         &none         xxx
+          &kp LBKT      &kp N7        &kp N8        &kp N9        &kp RBKT          &none         &none         &none         &none         &none         
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-xxx          &kp SQT       &kp N4        &kp N5        &kp N6        &kp EQUAL         &none         &kp RSHIFT    &kp RCTRL     &kp RALT      &kp RGUI      xxx
+          &kp SQT       &kp N4        &kp N5        &kp N6        &kp EQUAL         &none         &kp RSHIFT    &kp RCTRL     &kp RALT      &kp RGUI      
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-xxx          &kp TILDE     &kp N1        &kp N2        &kp N3        &kp BSLH          &none         &none         &none         &none         &none         xxx
+          &kp TILDE     &kp N1        &kp N2        &kp N3        &kp BSLH          &none         &none         &none         &none         &none         
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
                                       &lt FUN DOT   &kp N0        &kp MINUS         &trans        &trans        &trans
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -126,11 +126,11 @@ xxx          &kp TILDE     &kp N1        &kp N2        &kp N3        &kp BSLH   
 
 ZMK_LAYER(nav_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-xxx          &none         &none         &none         &none         &none             &kp K_REDO    &kp K_PASTE   &kp K_COPY    &kp K_CUT     &kp K_UNDO   xxx
+          &none         &none         &none         &none         &none             &kp K_REDO    &kp K_PASTE   &kp K_COPY    &kp K_CUT     &kp K_UNDO   
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
- xxx         &kp LWIN      &kp LALT      &kp LCTRL     &kp LSHFT     &none             &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp CAPS    xxx 
+          &kp LWIN      &kp LALT      &kp LCTRL     &kp LSHFT     &none             &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp CAPS     
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   xxx       &none         &none         &none         &none         &none             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp INSERT  xxx 
+          &none         &none         &none         &none         &none             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp INSERT   
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
                                       &trans        &trans        &trans            &trans        &trans        &mo FUN 
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -138,11 +138,11 @@ xxx          &none         &none         &none         &none         &none      
 
 ZMK_LAYER(fun_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-  xxx        &kp F12       &kp F7        &kp F7        &kp F9        &kp PRINTSCREEN   &none         &none         &none         &ext_power EP_ON  &ext_power EP_OFF xxx 
+          &kp F12       &kp F7        &kp F7        &kp F9        &kp PRINTSCREEN   &none         &none         &none         &ext_power EP_ON  &ext_power EP_OFF  
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-  xxx        &kp F11       &kp F4        &kp F5        &kp F5        &kp SCROLLLOCK    &none         &none         &none         &none         &none             xxx 
+          &kp F11       &kp F4        &kp F5        &kp F5        &kp SCROLLLOCK    &none         &none         &none         &none         &none              
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-  xxx        &kp F10       &kp F1        &kp F2        &kp F2        &kp PAUSE_BREAK   &usb_only     &_bt1         &_bt2         &_bt3         &_bt4             xxx 
+          &kp F10       &kp F1        &kp F2        &kp F2        &kp PAUSE_BREAK   &usb_only     &_bt1         &_bt2         &_bt3         &_bt4              
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
                                       &trans        &trans        &trans            &bt BT_CLR    &trans        &trans
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
