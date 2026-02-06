@@ -1,7 +1,5 @@
-#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -138,7 +136,7 @@ ZMK_LAYER(nav_layer,
 
 ZMK_LAYER(fun_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp F12       &kp F7        &kp F7        &kp F9        &kp PRINTSCREEN   &none         &none         &none         &ext_power EP_ON  &ext_power EP_OFF  
+          &kp F12       &kp F7        &kp F7        &kp F9        &kp PRINTSCREEN   &none         &none         &none         &none         &none
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp F11       &kp F4        &kp F5        &kp F5        &kp SCROLLLOCK    &none         &none         &none         &none         &none              
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
