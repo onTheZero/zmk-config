@@ -6,8 +6,8 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/36.h"
 
-#define ___ ___
-#define xxx xxx
+#define ___ &trans
+#define xxx &none
 
 #define DEF 0
 #define NUM 1
@@ -39,8 +39,8 @@ ZMK_HOLD_TAP(hml,
 
 ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
-    tapping-term-ms = <idle_ms>;
-    require-prior-idle-ms = <tap_ms>;
+    tapping-term-ms = <tap_ms>;
+    require-prior-idle-ms = <idle_ms>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
     bindings = <&kp>, <&kp>;
@@ -49,17 +49,6 @@ ZMK_HOLD_TAP(hmr,
 /* Custom behaviors */
 ZMK_CAPS_WORD(my_caps,
   continue-list = <UNDERSCORE MINUS BSPC>;
-)
-
-ZMK_TAP_DANCE(caps_dance,
-  tapping-term-ms = <dance_ms>;
-  bindings = <&my_caps>, <&kp CAPS>;
-)
-
-// tap: backspace | shift + tap: delete
-ZMK_MOD_MORPH(bs_del,
-    bindings = <&kp BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
 ZMK_MACRO(usb_only,
@@ -87,6 +76,38 @@ ZMK_MACRO(_bt4,
   tap-ms = <5>;
   bindings = <&bt BT_SEL 4 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &out OUT_BLE>;
 )
+
+ZMK_TAP_DANCE(caps_dance,
+  tapping-term-ms = <dance_ms>;
+  bindings = <&my_caps>, <&kp CAPS>;
+)
+
+// tap: backspace | shift + tap: delete
+ZMK_MOD_MORPH(bs_del,
+    bindings = <&kp BSPC>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+ZMK_MOD_MORPH(r_bt1,
+  bindings = <&_bt1>, <&bt BT_SEL 1 &bt BT_CLEAR>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+  )
+
+ZMK_MOD_MORPH(r_bt2,
+  bindings = <&_bt2>, <&bt BT_SEL 2 &bt BT_CLEAR>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+ZMK_MOD_MORPH(r_bt3,
+  bindings = <&_bt3>, <&bt BT_SEL 3 &bt BT_CLEAR>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+ZMK_MOD_MORPH(r_bt4,
+  bindings = <&_bt4>, <&bt BT_SEL 4 &bt BT_CLEAR>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
 // combos
 ZMK_COMBO(caps_com, &caps_dance, LM1 RM1, ALL)
 
@@ -101,7 +122,6 @@ ZMK_COMBO(rbkt_com, &kp RBKT, RB0 RB1, ALL)
 
 ZMK_COMBO(lreset, &bootloader, LT3 LT4, NAV)
 ZMK_COMBO(rreset, &bootloader, RT3 RT4, NUM)
-
 /* Keymap */
 
 ZMK_LAYER(default_layer,
