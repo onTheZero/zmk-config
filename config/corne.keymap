@@ -76,40 +76,59 @@ ZMK_MACRO(_bt4,
   tap-ms = <5>;
   bindings = <&bt BT_SEL 4 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &out OUT_BLE>;
 )
-
+ZMK_MACRO(clear_bt1,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&bt BT_SEL 1 &bt BT_CLR>;
+)
+ZMK_MACRO(clear_bt2,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&bt BT_SEL 2 &bt BT_CLR>;
+)
+ZMK_MACRO(clear_bt3,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&bt BT_SEL 3 &bt BT_CLR>;
+)
+ZMK_MACRO(clear_bt4,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&bt BT_SEL 4 &bt BT_CLR>;
+)
 ZMK_TAP_DANCE(caps_dance,
   tapping-term-ms = <dance_ms>;
   bindings = <&my_caps>, <&kp CAPS>;
 )
 
 // tap: backspace | shift + tap: delete
-ZMK_MOD_MORPH(bs_del,
+ZMK_MOD_MORPH(m_del,
     bindings = <&kp BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_MOD_MORPH(r_bt1,
-  bindings = <&_bt1>, <&bt BT_SEL 1 &bt BT_CLEAR>;
+ZMK_MOD_MORPH(m_bt1,
+  bindings = <&_bt1>, <&clear_bt1>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
   )
 
-ZMK_MOD_MORPH(r_bt2,
-  bindings = <&_bt2>, <&bt BT_SEL 2 &bt BT_CLEAR>;
+ZMK_MOD_MORPH(m_bt2,
+  bindings = <&_bt2>, <&clear_bt2>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_MOD_MORPH(r_bt3,
-  bindings = <&_bt3>, <&bt BT_SEL 3 &bt BT_CLEAR>;
+ZMK_MOD_MORPH(m_bt3,
+  bindings = <&_bt3>, <&clear_bt3>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_MOD_MORPH(r_bt4,
-  bindings = <&_bt4>, <&bt BT_SEL 4 &bt BT_CLEAR>;
+ZMK_MOD_MORPH(m_bt4,
+  bindings = <&_bt4>, <&clear_bt4>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
 // combos
-ZMK_COMBO(caps_com, &caps_dance, LM1 RM1, ALL)
+ZMK_COMBO(caps_com, &caps_dance, LM0 RM0, ALL)
 
 ZMK_COMBO(tab_com, &kp TAB, LM1 LM2, ALL)
 
@@ -140,23 +159,23 @@ ZMK_LAYER(num_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp LBKT      &kp N7        &kp N8        &kp N9        &kp RBKT          xxx           xxx           xxx           xxx           xxx         
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp SQT       &kp N4        &kp N5        &kp N6        &kp EQUAL         xxx         &kp RSHIFT    &kp RCTRL     &kp RALT      &kp RGUI      
+          &kp SQT       &kp N4        &kp N5        &kp N6        &kp EQUAL         xxx           &kp RSHIFT    &kp RCTRL     &kp RALT      &kp RGUI      
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp TILDE     &kp N1        &kp N2        &kp N3        &kp BSLH          xxx           xxx           xxx           xxx           xxx         
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
-                                      &lt FUN DOT   &kp N0        &kp MINUS         ___        ___        ___
+                                      &lt FUN DOT   &kp N0        &kp MINUS         ___           ___           ___
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
 ZMK_LAYER(nav_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          xxx           xxx           xxx           xxx           xxx             &kp K_REDO    &kp K_PASTE   &kp K_COPY    &kp K_CUT     &kp K_UNDO   
+          xxx           xxx           xxx           xxx           xxx               &kp K_REDO    &kp K_PASTE   &kp K_COPY    &kp K_CUT     &kp K_UNDO   
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LWIN      &kp LALT      &kp LCTRL     &kp LSHFT     xxx             &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp CAPS     
+          &kp LWIN      &kp LALT      &kp LCTRL     &kp LSHFT     xxx               &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp CAPS     
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          xxx           xxx           xxx           xxx           xxx             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp INSERT   
+          xxx           xxx           xxx           xxx           xxx               &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp INSERT   
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
-                                      ___        ___        ___            ___        ___        &mo FUN 
+                                      ___           ___           ___               ___           ___           &mo FUN 
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -166,9 +185,9 @@ ZMK_LAYER(fun_layer,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp F11       &kp F4        &kp F5        &kp F5        &kp SCROLLLOCK    xxx           xxx           xxx           xxx           xxx              
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp F10       &kp F1        &kp F2        &kp F2        &kp PAUSE_BREAK   &usb_only     &_bt1         &_bt2         &_bt3         &_bt4              
+          &kp F10       &kp F1        &kp F2        &kp F2        &kp PAUSE_BREAK   &usb_only     &m_bt1         &m_bt2         &m_bt3         &m_bt4              
      // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
-                                      ___        ___        ___            &bt BT_CLR    ___        ___
+                                      ___           ___           ___               &bt BT_CLR    ___           ___
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
