@@ -90,7 +90,7 @@ ZMK_MACRO(_bt4,
   bindings = <&bt BT_SEL 4 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &out OUT_BLE>;
 )
 // combos
-ZMK_COMBO(caps_com,   &caps_dance, LM1 RM1, ALL)
+//ZMK_COMBO(caps_com,   &caps_dance, LM1 RM1, ALL)
 
 ZMK_COMBO(lpar_com,   &kp LPAR, LT0 LT1, ALL)
 ZMK_COMBO(rpar_com,   &kp RPAR, RT0 RT1, ALL)
