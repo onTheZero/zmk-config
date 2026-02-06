@@ -46,22 +46,15 @@ ZMK_CAPS_WORD(my_caps,
   continue-list = <UNDERSCORE MINUS BSPC>;
 )
 
-//ZMK_TAP_DANCE(cw_cl, tap_dance,
-//  tapping-term-ms = <dance_ms>;
-//  bindings = <&my_caps, &kp CAPS>;
-//)
+ZMK_TAP_DANCE(caps_dance,
+  tapping-term-ms = <dance_ms>;
+  bindings = <&my_caps>, <&kp CAPS>;
+)
 
 // tap: backspace | shift + tap: delete
 ZMK_MOD_MORPH(bs_del,
     bindings = <&kp BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-// windows sleep macro
-ZMK_MACRO(win_sleep,
-    wait-ms = <100>;
-    tap-ms = <5>;
-    bindings = <&kp LG(X) &kp U &kp S>;
 )
 
 ZMK_MACRO(usb_only,
@@ -90,7 +83,7 @@ ZMK_MACRO(_bt4,
   bindings = <&bt BT_SEL 4 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &out OUT_BLE>;
 )
 // combos
-//ZMK_COMBO(caps_com,   &caps_dance, LM1 RM1, ALL)
+ZMK_COMBO(caps_com,   &caps_dance, LM1 RM1, ALL)
 
 ZMK_COMBO(lpar_com,   &kp LPAR, LT0 LT1, ALL)
 ZMK_COMBO(rpar_com,   &kp RPAR, RT0 RT1, ALL)
