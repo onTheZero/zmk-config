@@ -22,9 +22,12 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
 #define THUMBS LH1 LH0 RH0 RH1                                              // thumbs
 
-#define idle_ms 100
+#define idle_ms 120
 #define tap_ms 280
 #define dance_ms 200
+
+#undef COMBO_TERM
+#define COMBO_TERM 50
 
 / {
   chosen {
@@ -35,6 +38,7 @@
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
     tapping-term-ms = <tap_ms>;
+    quick-tap-ms = <175>;
     require-prior-idle-ms = <idle_ms>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
     hold-trigger-on-release;
@@ -44,6 +48,7 @@ ZMK_HOLD_TAP(hml,
 ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
     tapping-term-ms = <tap_ms>;
+    quick-tap-ms = <175>;
     require-prior-idle-ms = <idle_ms>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
@@ -59,7 +64,6 @@ ZMK_TAP_DANCE(caps_dance,
   tapping-term-ms = <dance_ms>;
   bindings = <&my_caps>, <&kp CAPS>;
 )
-
 // tap: backspace | shift + tap: delete
 ZMK_MOD_MORPH(m_del,
     bindings = <&kp BSPC>, <&kp DEL>;
