@@ -17,13 +17,13 @@
 #define FUNL 5
 #define FUNR 6
 
+#define hm_tap_ms 300
+#define def_tap_ms 200
+#define quick_ms 175
 #define idle_ms 90
-#define tap_ms 300
-#define dance_ms 200
 
 #undef COMBO_TERM
 #define COMBO_TERM 50
-
 
 / {
   chosen {
@@ -31,10 +31,16 @@
   };
 };
 
+&lt {
+  flavor = "balanced";
+  tapping-term-ms = <def_tap_ms>;
+  quick-tap-ms = <quick_ms>;
+};
+
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
-    tapping-term-ms = <tap_ms>;
-    quick-tap-ms = <175>;
+    tapping-term-ms = <hm_tap_ms>;
+    quick-tap-ms = <quick_ms>;
     require-prior-idle-ms = <idle_ms>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
     hold-trigger-on-release;
@@ -43,8 +49,8 @@ ZMK_HOLD_TAP(hml,
 
 ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
-    tapping-term-ms = <tap_ms>;
-    quick-tap-ms = <175>;
+    tapping-term-ms = <hm_tap_ms>;
+    quick-tap-ms = <quick_ms>;
     require-prior-idle-ms = <idle_ms>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
@@ -57,14 +63,12 @@ ZMK_CAPS_WORD(my_caps,
 )
 
 ZMK_TAP_DANCE(caps_dance,
-  tapping-term-ms = <dance_ms>;
+  tapping-term-ms = <def_tap_ms>;
   bindings = <&my_caps>, <&kp CAPS>;
 )
 
 // combos
 ZMK_COMBO(caps_com, &caps_dance, LM0 RM0, DEF)
-ZMK_COMBO(lreset, &bootloader, LT3 LT4, NAV)
-ZMK_COMBO(rreset, &bootloader, RT3 RT4, NUM)
 
 /* Keymap */
 ZMK_LAYER(default_layer,
@@ -73,7 +77,7 @@ ZMK_LAYER(default_layer,
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHIFT F &kp G             &kp H         &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI P  
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp Z         &kp X         &kp C         &lt NAV V     &kp B             &kp N         &lt NUM M     &kp COMMA     &kp DOT       &kp FSLH    
+      &kp Z         &kp X         &kp C         &lt NAV V     &kp B             &kp M         &lt NUM M     &kp COMMA     &kp DOT       &kp FSLH    
   // ╰─────────────────────────────────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────────────────────────────────╯
                                   &kp TAB       &kp SPACE     &kp ESC           &kp ENTER     &kp BSPC      &kp DEL
   //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
