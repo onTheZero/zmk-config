@@ -20,7 +20,7 @@
 #define hm_tap_ms 300
 #define def_tap_ms 200
 #define quick_ms 175
-#define idle_ms 90
+#define idle_ms 80
 
 #undef COMBO_TERM
 #define COMBO_TERM 50
