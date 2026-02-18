@@ -17,10 +17,10 @@
 #define FUNL 5
 #define FUNR 6
 
-#define hm_tap_ms 300
-#define def_tap_ms 200
-#define quick_ms 175
-#define idle_ms 80
+#define hm_tap_ms 250
+#define def_tap_ms 250
+#define quick_ms 100
+#define idle_ms 75
 
 #undef COMBO_TERM
 #define COMBO_TERM 50
